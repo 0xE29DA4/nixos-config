@@ -1,0 +1,9 @@
+keys:
+  # 主机服务器公[O钥 ssh_host_ed25519_key.pub 转为 age 公钥
+  - &chamomile age18trp4mva6247fjr48z9rh634aa8h4muavs8k6qxcklm8hmmghy9sqv5yd4
+
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+    - age:
+      - *chamomile
