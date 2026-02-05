@@ -2,7 +2,7 @@
   description = "Chamomile NixOS Configuration";
   inputs = {
     nixpkgs.url = "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixos-unstable/nixexprs.tar.xz";
-    # original url
+    # Official URL
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {

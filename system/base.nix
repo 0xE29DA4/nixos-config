@@ -1,10 +1,8 @@
 { config, lib, pkgs, ... }: {
-  # 系统基础配置
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   services.logrotate.checkConfig = false;
 
-  # 本地化配置
   time.timeZone = "Asia/Shanghai";
   i18n = {
     defaultLocale = "zh_CN.UTF-8";
@@ -21,7 +19,6 @@
     maple-mono.NF-CN-unhinted
   ];
 
-  # 用户与权限
   users.mutableUsers = false;
   users.users.root = {
     hashedPasswordFile = config.sops.secrets.chamomile-password.path;
@@ -42,23 +39,15 @@
   security.sudo.wheelNeedsPassword = true;
 
   environment.systemPackages = with pkgs; [
-    # 压缩工具
     zip unzip
-    # 网络工具
     wget curl
-    # 文件工具
     tree fd ripgrep
-    # 编辑器
     neovim
-    # 系统工具
     htop fastfetch tealdeer
-    # 开发工具
     git mkcert
-    # 加密工具
     sops ssh-to-age
   ];
 
-  # 程序与软件包
   programs.neovim = {
     enable = true;
     defaultEditor = true;
