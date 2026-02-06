@@ -1,10 +1,8 @@
 {
   description = "Chamomile NixOS Configuration";
+
   inputs = {
     nixpkgs.url = "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixos-unstable/nixexprs.tar.xz";
-    # Official URL
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,6 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
   outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs:
     let
       mkHost = host: system:
@@ -23,10 +22,12 @@
             ./hosts/${host}/default.nix
 
             ./system/base.nix
+            ./system/nix.nix
+	    ./system/users.nix
             ./system/network.nix
             ./system/security.nix
-            ./system/nix.nix
             ./system/services/podman.nix
+            ./system/services/dnsmasq.nix
 
 	    sops-nix.nixosModules.sops
 

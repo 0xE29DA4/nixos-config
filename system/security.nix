@@ -9,6 +9,8 @@
     neededForUsers = true;
   };
 
+  security.sudo.wheelNeedsPassword = true;
+
   services.openssh = {
     enable = true;
     settings = {
