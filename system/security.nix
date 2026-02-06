@@ -9,7 +9,7 @@
     neededForUsers = true;
   };
 
-  security.sudo.wheelNeedsPassword = true;
+  security.sudo.wheelNeedsPassword = false;
 
   services.openssh = {
     enable = true;
