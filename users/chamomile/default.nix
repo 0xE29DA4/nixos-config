@@ -21,6 +21,9 @@
 
   programs.zsh = {
     enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    enableCompletion = true;
     oh-my-zsh = {
       enable = true;
       # or "agnoster", "powerlevel10k", etc...
@@ -34,6 +37,7 @@
     shellAliases = {
       ll = "ls -la";
       ".." = "cd ..";
+      "_rebuild" = "sudo nixos-rebuild switch --flake /home/chamomile/nixos-config#chamomile";
     };
     initContent = ''
       export EDITOR=nvim

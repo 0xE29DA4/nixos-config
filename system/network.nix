@@ -6,4 +6,6 @@
       allowedTCPPorts = [ 22 80 443 ];
     };
   };
+
+  services.tailscale.enable = true;
 }
