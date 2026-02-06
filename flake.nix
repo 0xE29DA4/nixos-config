@@ -23,9 +23,12 @@
 
             ./system/base.nix
             ./system/nix.nix
+	    ./system/fonts.nix
+	    ./system/locale.nix
 	    ./system/users.nix
             ./system/network.nix
             ./system/security.nix
+
             ./system/services/podman.nix
             ./system/services/dnsmasq.nix
 
