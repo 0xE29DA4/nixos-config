@@ -90,8 +90,7 @@
 
   };
 
-  systemd.services.dnsmasq.preStart = ''
-    touch /var/log/dnsmasq.log
-    chown dnsmasq:dnsmasq /var/log/dnsmasq.log
-  '';
+  systemd.tmpfiles.rules = [
+    "f /var/log/dnsmasq.log 0644 dnsmasq dnsmasq -"
+  ];
 }

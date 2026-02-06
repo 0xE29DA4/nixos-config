@@ -8,4 +8,11 @@
   nix.settings.trusted-public-keys = [
     "mic92.cachix.org-1:gi8Sa+I96ZB/vjRjEe9nb0mW7qDln9dXBqjoz8K0saQ="
   ];
+  nix.settings.auto-optimise-store = true;
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
 }

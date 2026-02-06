@@ -27,7 +27,7 @@
     oh-my-zsh = {
       enable = true;
       # or "agnoster", "powerlevel10k", etc...
-      theme = "robbyrussell";
+      theme = "agnoster";
       plugins = [
         "git"
         "sudo"
