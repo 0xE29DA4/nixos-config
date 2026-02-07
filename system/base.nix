@@ -7,7 +7,7 @@
     zip unzip
     wget curl tailscale dnsutils
     tree fd ripgrep
-    neovim
+    neovim tmux
     htop fastfetch tealdeer
     git mkcert
     sops ssh-to-age
