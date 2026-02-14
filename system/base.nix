@@ -4,12 +4,17 @@
   services.logrotate.checkConfig = false;
 
   environment.systemPackages = with pkgs; [
-    zip unzip
-    wget curl tailscale dnsutils rsync
-    tree fd ripgrep
-    neovim tmux
-    pstree htop fastfetch tealdeer
-    git mkcert
+    openssh openssl
+    nh
+    zip unzip xz zstd
+    wget curl tailscale dnsutils rsync wireguard-tools
+    tree fd ripgrep bat eza jq yq-go zoxide fzf yazi
+    zellij
+    pstree btop fastfetch
+    lm_sensors usbutils pciutils hw-probe
+    tealdeer
+    git direnv
+    mkcert
     sops ssh-to-age
   ];
 
@@ -21,3 +26,4 @@
   };
   programs.zsh.enable = true;
 }
+

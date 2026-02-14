@@ -6,8 +6,17 @@
   home.stateVersion = "25.11";
   home.sessionVariables = {};
   home.packages = with pkgs; [
-    bun
+    bun nodejs gcc rustup python3
+    cmake ninja
+    kubectl
+    nmap tcpdump frp
+    opencode
   ];
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   imports = [
     ./git.nix
