@@ -36,3 +36,4 @@
       nixosConfigurations.chamomile = mkHost "chamomile" "x86_64-linux";
     };
 }
+

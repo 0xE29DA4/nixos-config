@@ -5,10 +5,10 @@
 
   environment.systemPackages = with pkgs; [
     zip unzip
-    wget curl tailscale dnsutils
+    wget curl tailscale dnsutils rsync
     tree fd ripgrep
     neovim tmux
-    htop fastfetch tealdeer
+    pstree htop fastfetch tealdeer
     git mkcert
     sops ssh-to-age
   ];

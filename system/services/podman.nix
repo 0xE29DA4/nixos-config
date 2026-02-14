@@ -15,7 +15,7 @@
     unqualified-search-registries = ["docker.io"]
     [[registry]]
     prefix = "docker.io"
-    location = "mirror.ccs.tencentyun.com"
+    location = "d5nnao6.mirror.aliyuncs.com"
   '';
 }
 
