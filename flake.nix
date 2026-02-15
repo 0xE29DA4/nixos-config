@@ -1,5 +1,5 @@
 {
-  description = "Chamomile NixOS Configuration";
+  description = "NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixos-unstable/nixexprs.tar.xz";
