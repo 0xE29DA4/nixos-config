@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       user.name = "Chamomile Tea";
-      user.email = "0xE29DA4@gmail.com";
+      user.email = "me@chamomile.icu";
       init.defaultBranch = "main";
       core.editor = "nvim";
     };
