@@ -4,15 +4,13 @@
   services.logrotate.checkConfig = false;
 
   environment.systemPackages = with pkgs; [
-    openssh openssl
+    openssl cron
     nh
     zip unzip xz zstd
     wget curl tailscale dnsutils rsync wireguard-tools
-    tree fd ripgrep bat eza jq yq-go zoxide fzf yazi
-    zellij
+    tree fd ripgrep bat eza jq yq-go zoxide fzf yazi zellij tealdeer
     pstree btop fastfetch
     lm_sensors usbutils pciutils hw-probe
-    tealdeer
     git direnv
     mkcert
     sops ssh-to-age
@@ -24,6 +22,7 @@
     viAlias = true;
     vimAlias = true;
   };
+
   programs.zsh.enable = true;
 }
 

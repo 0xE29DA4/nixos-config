@@ -15,7 +15,11 @@
     unqualified-search-registries = ["docker.io"]
     [[registry]]
     prefix = "docker.io"
-    location = "d5nnao6.mirror.aliyuncs.com"
+    location = "docker.xuanyuan.me"
+    insecure = false
+    
+    [[registry.mirror]]
+    location = "docker.1panel.live"
   '';
 }
 

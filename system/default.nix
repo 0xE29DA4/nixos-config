@@ -7,6 +7,8 @@
     ./users.nix
     ./network.nix
     ./security.nix
+
+    ./services/openssh.nix
     ./services/dae.nix
     ./services/podman.nix
     ./services/dnsmasq.nix
