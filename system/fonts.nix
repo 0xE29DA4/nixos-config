@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   fonts.packages = with pkgs; [
     wqy_zenhei
     wqy_microhei

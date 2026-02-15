@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
@@ -17,9 +22,8 @@
     prefix = "docker.io"
     location = "docker.xuanyuan.me"
     insecure = false
-    
+
     [[registry.mirror]]
     location = "docker.1panel.live"
   '';
 }
-

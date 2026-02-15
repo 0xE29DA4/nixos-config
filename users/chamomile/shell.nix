@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -7,7 +7,7 @@
     oh-my-zsh = {
       enable = true;
       # or "agnoster", "powerlevel10k", etc...
-      theme = "agnoster";
+      theme = "powerlevel10k";
       plugins = [
         "git"
         "sudo"
@@ -17,10 +17,10 @@
     shellAliases = {
       ll = "ls -la";
       ".." = "cd ..";
-      "_rebuild" = "sudo nixos-rebuild switch --flake /home/chamomile/nixos-config#chamomile";
     };
     initContent = ''
       export EDITOR=nvim
+      eval "$(direnv hook zsh)"
     '';
     history = {
       size = 10000;
@@ -36,13 +36,12 @@
     settings = {
       add_newline = false;
       character = {
-      success_symbol = "[➜](<bold green>)";
-      error_symbol = "[✗](<bold red>)";
+        success_symbol = "[➜](<bold green>)";
+        error_symbol = "[✗](<bold red>)";
+      };
     };
   };
-};
 
-  # Show Fastfetch On Boot
   programs.fastfetch.enable = true;
   home.sessionVariables.FASTFETCH_SHOW_ON_LOGIN = "1";
   home.file.".zprofile".text = ''

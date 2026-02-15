@@ -1,7 +1,12 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   services.dnsmasq = {
     enable = true;
-    
+
     settings = {
       interface = "tailscale0";
       bind-interfaces = true;
@@ -30,4 +35,3 @@
     "f /var/log/dnsmasq.log 0644 dnsmasq dnsmasq -"
   ];
 }
-

@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   users.mutableUsers = false;
 
   users.users.root = {
@@ -11,7 +15,7 @@
   users.users.chamomile = {
     isNormalUser = true;
     description = "Chamomile Tea";
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets.chamomile-password.path;
     openssh.authorizedKeys.keys = [
