@@ -8,9 +8,10 @@
     ./network.nix
     ./security.nix
 
-    ./services/openssh.nix
     ./services/dae.nix
     ./services/podman.nix
+    ./services/openssh.nix
     ./services/dnsmasq.nix
+    ./services/tailscale.nix
   ];
 }

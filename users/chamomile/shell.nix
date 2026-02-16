@@ -1,22 +1,27 @@
-{...}: {
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}: {
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    enableCompletion = true;
     oh-my-zsh = {
       enable = true;
-      # or "agnoster", "powerlevel10k", etc...
-      theme = "powerlevel10k";
+      theme = "agnoster";
       plugins = [
+        "x"
         "git"
         "sudo"
         "command-not-found"
+        "colored-man-pages"
       ];
     };
     shellAliases = {
-      ll = "ls -la";
-      ".." = "cd ..";
+      ls = "eza";
     };
     initContent = ''
       export EDITOR=nvim
@@ -42,7 +47,9 @@
     };
   };
 
-  programs.fastfetch.enable = true;
+  programs.fastfetch = {
+    enable = true;
+  };
   home.sessionVariables.FASTFETCH_SHOW_ON_LOGIN = "1";
   home.file.".zprofile".text = ''
     if [ -n "$PS1" ] && [ -n "$FASTFETCH_SHOW_ON_LOGIN" ]; then

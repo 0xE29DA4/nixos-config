@@ -1,59 +1,74 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   services.logrotate.checkConfig = false;
-
   environment.systemPackages = with pkgs; [
-    openssl
+    # basic
     cron
+    openssl
+    sops
+    ssh-to-age
+    # nix
     nh
-    zip
-    unzip
-    xz
-    zstd
-    wget
-    curl
-    tailscale
-    dnsutils
-    rsync
-    wireguard-tools
-    tree
+    # find and locate
     fd
     ripgrep
-    bat
-    eza
-    jq
-    yq-go
-    zoxide
-    fzf
-    yazi
-    zellij
-    tealdeer
-    pstree
+    # disk and file
+    duf
+    dust
+    # process and jobs
     btop
+    procs
+    # system info and status
     fastfetch
     lm_sensors
     usbutils
     pciutils
     hw-probe
-    git
+    # archieve
+    xz
+    zip
+    unzip
+    gzip
+    bzip2
+    zstd
+    # network
+    mtr
+    frp
+    wget
+    curl
+    nmap
+    rsync
+    tcpdump
+    tailscale
+    doggo
+    iproute2
+    dnsutils
+    wireguard-tools
+    # text preview and extraction
+    bat
+    # development
+    colordiff
+    delta
     direnv
     mkcert
-    sops
-    ssh-to-age
+    tealdeer
+    kubectl
+    # misc
+    tree
+    eza
+    jq
+    yq-go
+    fzf
+    yazi
+    zellij
   ];
 
+  programs.zsh.enable = true;
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
   };
-
-  programs.zsh.enable = true;
 }

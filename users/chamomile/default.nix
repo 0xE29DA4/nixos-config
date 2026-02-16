@@ -1,36 +1,29 @@
 {
-  config,
+  lib,
   pkgs,
+  config,
   ...
 }: {
   programs.home-manager.enable = true;
-
   home.username = "chamomile";
   home.homeDirectory = "/home/chamomile";
   home.stateVersion = "25.11";
-  home.sessionVariables = {};
   home.packages = with pkgs; [
+    # runtime
+    gcc
     bun
     nodejs
-    gcc
     rustup
     python3
+    # build tools
     cmake
     ninja
-    kubectl
-    nmap
-    tcpdump
-    frp
+    # application
     opencode
   ];
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   imports = [
     ./git.nix
     ./shell.nix
+    ./zoxide.nix
   ];
 }
