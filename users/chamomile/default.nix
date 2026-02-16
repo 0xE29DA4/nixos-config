@@ -19,6 +19,7 @@
     cmake
     ninja
     # application
+    minio-client
     opencode
   ];
   imports = [
