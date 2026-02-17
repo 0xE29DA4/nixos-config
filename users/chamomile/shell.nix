@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  config,
-  ...
-}: {
+{...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -13,11 +8,9 @@
       enable = true;
       theme = "agnoster";
       plugins = [
-        "x"
         "git"
         "sudo"
-	"podman"
-	"podman-compose"
+        "podman"
         "command-not-found"
         "colored-man-pages"
       ];

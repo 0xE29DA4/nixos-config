@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   programs.home-manager.enable = true;
   home.username = "chamomile";
   home.homeDirectory = "/home/chamomile";
