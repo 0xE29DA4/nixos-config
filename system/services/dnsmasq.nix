@@ -27,6 +27,6 @@
   };
 
   systemd.tmpfiles.rules = [
-    "f /var/log/dnsmasq.log 0644 dnsmasq dnsmasq -"
+    "f /var/log/dnsmasq.log 0640 dnsmasq dnsmasq -"
   ];
 }
