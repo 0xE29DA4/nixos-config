@@ -16,6 +16,8 @@
         "x"
         "git"
         "sudo"
+	"podman"
+	"podman-compose"
         "command-not-found"
         "colored-man-pages"
       ];
