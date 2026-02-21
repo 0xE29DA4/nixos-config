@@ -8,7 +8,7 @@
   ];
   nix.settings.trusted-public-keys = [
     "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    "mic92.cachix.org-1:gi8Sa+I96ZB/vjRjEe9nb0mW7qDln9dXBqjoz8K0saQ="
+    "mic92.cachix.org-1:gi8IhgiT3CYZnJsaW7fxznzTkMUOn1RY4GmXdT/nXYQ="
   ];
   nix.settings.auto-optimise-store = true;
 
