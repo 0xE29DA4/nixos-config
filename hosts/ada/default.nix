@@ -5,6 +5,6 @@
   ...
 }: {
   imports = [./hardware.nix];
-  networking.hostName = "chamomile";
+  networking.hostName = "ada";
   system.stateVersion = "25.11";
 }

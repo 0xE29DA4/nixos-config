@@ -1,6 +1,6 @@
 {...}: {
   networking = {
-    domain = "chamomile.icu";
+    domain = "ada.chamomile.icu";
     firewall = {
       enable = true;
       backend = "nftables";

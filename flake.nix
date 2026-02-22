@@ -32,7 +32,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/${host}/default.nix
+          ./hosts/ada/default.nix
           ./system/default.nix
           sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
@@ -44,7 +44,7 @@
         ];
       };
   in {
-    nixosConfigurations.chamomile = mkHost "chamomile" "x86_64-linux";
+    nixosConfigurations.ada = mkHost "ada" "x86_64-linux";
     formatter.x86_64-linux = (pkgsFor "x86_64-linux").alejandra;
     devShells.x86_64-linux.default = (pkgsFor "x86_64-linux").mkShell {
       packages = [
