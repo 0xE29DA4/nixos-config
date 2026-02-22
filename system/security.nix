@@ -8,6 +8,5 @@
   sops.secrets.chamomile-password = {
     neededForUsers = true;
   };
-
-  security.sudo.wheelNeedsPassword = true;
+  security.sudo.wheelNeedsPassword = false;
 }
