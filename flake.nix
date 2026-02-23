@@ -32,14 +32,17 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/ada/default.nix
-          ./system/default.nix
+          ./hosts/${host}
+          ./system
           sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.chamomile = import ./users/chamomile;
+            home-manager.sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
+            home-manager.users.chamomile = {
+              imports = [ ./users/chamomile ];
+            };
           }
         ];
       };
