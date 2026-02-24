@@ -6,6 +6,9 @@
       PermitRootLogin = "prohibit-password";
       PasswordAuthentication = false;
       AllowUsers = ["chamomile"];
+      ClientAliveInterval = 60;
+      ClientAliveCountMax = 3;
+      TCPKeepAlive = "yes";
     };
     hostKeys = [
       {
