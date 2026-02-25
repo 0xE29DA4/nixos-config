@@ -48,7 +48,7 @@
     # text preview and extraction
     bat
     # development
-    colordiff
+    difftastic
     delta
     direnv
     mkcert
