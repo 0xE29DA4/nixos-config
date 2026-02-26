@@ -11,10 +11,6 @@
         # Nginx
         80
         443
-        # openlist
-        5244
-        # immich
-        2283
       ];
     };
     nftables = {
