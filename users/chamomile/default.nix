@@ -14,6 +14,7 @@
     cmake
     ninja
     # application
+    syncthing
     minio-client
     opencode
   ];
